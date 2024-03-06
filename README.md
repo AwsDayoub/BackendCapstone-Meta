@@ -2,7 +2,7 @@
 project for the Meta Back-End course with main focus on testing and connecting django with mysql server
 
 
-# Commands
+## Commands
 
 # create virtual environment
 py -m venv venv
@@ -12,16 +12,15 @@ pip install -r requirements.txt
 cd littlelemon
 
 
-# -----
 
-# Mysql server
+## Mysql server
 create database littlelemon;
 use littlelemon;
 CREATE USER 'user1'@'localhost' IDENTIFIED BY '123';
 GRANT ALL PRIVILEGES ON littlelemon.* TO 'user1'@'localhost';
 
 
-# cmd
+## cmd
 python3 manage.py migrate 
 python3 manage.py makemigrations
 python manage.py createsuperuser
@@ -29,9 +28,7 @@ python manage.py createsuperuser
 #password: 123
 
 
-# ------
-
-# APIs
+## APIs
 
 http://localhost:8000/api/menu/1
 
@@ -49,6 +46,6 @@ http://127.0.0.1:8000/auth/token/login/
 
 python manage.py test
 
-```sql
+# Mysql
 GRANT ALL PRIVILEGES ON `test_littlelemon`.* TO 'user1'@'localhost';
 FLUSH PRIVILEGES;
